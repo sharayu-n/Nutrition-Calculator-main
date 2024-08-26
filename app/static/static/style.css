@@ -1,0 +1,133 @@
+body {
+  background-color: rgb(92, 194, 235);
+}
+
+.logo {
+  width: 13em;
+  height: 63px;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+h1 strong {
+  font-weight: 600;
+  color: #4b8673;
+}
+
+.inputstyle {
+  padding: 15px !important;
+}
+
+.whoop {
+  background-color: #5fd068;
+  width: 8em;
+  font-size: 30px !important;
+  color: #ffffff;
+}
+
+.caloriescont {
+  background-color: #ffffff;
+  padding: 30px;
+}
+
+.caloriescont ul {
+  padding: 0px;
+}
+
+.caloriescont ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #efefef;
+  width: 80%;
+}
+
+.caloriescont h3 {
+  color: #4b8673;
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.caloriescont h5 {
+  color: #4b8673;
+}
+
+.servingsize {
+  background-color: #000000;
+  padding: 10px;
+  color: #ffffff;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+#navbar{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#logo{
+  margin: 20px 34px;
+}
+#logo img{
+  height: 70px;
+  margin: 3px 6px;
+
+}
+#navbar ul{
+  display: flex;
+  font-family: 'Baloo Bhai', cursive;
+}
+#navbar::before{
+  content: "";
+  background-color: #16cd53;
+  position:absolute;
+  height: 100%;
+  width:100%;
+  z-index: -1;
+  opacity: 0.90;
+  
+  
+}
+#navbar ul li{
+  list-style: none; 
+  font-size: 1.3rem;
+}
+#navbar ul li a{
+  display: flex;
+  color: white;
+  display: block;
+  padding: 3px 33px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+#navbar ul li a:hover{
+  display: block;
+  background-color:rgb(35, 240, 175);
+}
+#form_txt {
+  padding: 100px;
+  margin: 50px;
+  border: 3px solid white;
+  text-align: center;
+}
+
+label{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  font-weight: 300;
+}
+
+#button{
+  font-variant: small-caps;
+  padding: 6px 20px;
+  color: white;
+  background-color: greenyellow;
+  border: 2px solid black;
+  margin: 17px;
+  font-size: 1.5rem;
+  border-radius :20px; ;
+  cursor: pointer; 
+}

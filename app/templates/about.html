@@ -1,0 +1,75 @@
+{% load static %}{%load mathfilters %}{%load humanize%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link href="{% static 'static\style2.css' %}" rel="stylesheet" type="text/css" />
+    <title>Foodie Calorie Finder home </title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{% static 'static\images\logo.png' %}"  />
+        </div>
+        <ul>
+            <li class="item"><a href="{% url 'login'%}">Login Page</a></li>
+            <li class="item"><a href="{%url 'home'%}">Calorie Calculator</a></li>
+            <li class="item"><a href="{%url 'about'%}">About us</a></li>
+            
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="heading">Swasthya: Your own diet planner</h1>
+        <p>Diet and health has been gaining the attention of the youth since the Covid-19 situation. People have become really particular about their calorie intakes. So, we present the ‘Diet planner’, a web based application that will track your calorie intake and help you schedule your diet daily. It will also monitor and remind you about your water intakes in case you have high sodium intake.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatem veritatis quaerat ullam,
+            pariatur praesentium quasi vel voluptate explicabo facere.</p><br>
+    </section>
+
+    <section class="services">
+        <h1 class="k1 center">Our Believes</h1>
+        <div id="services">
+            <div class="box">
+                <img src="{% static 'static\images\yog.png' %}">
+                <h2 class="heading2 center">Yoga se hoga</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'static\images\walking.png' %}">
+                <h2 class="heading2 center">A mile can let u live longer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'static\images\weightlifter.png' %}">
+                <h2 class="heading2 center">Gain muscle, not weight</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">These Is Some Of our sponsors  </h1>
+        <div id="clients">
+            <div class="client-item">
+                <a href="https://byjus.com/byjus-classes-book-free-60-mins-class/?utm_source=google&utm_mode=CPA&utm_campaign=K10-IN-Brand-BYJU%27S-USD-Exact&utm_term=byjus&gclid=Cj0KCQjwnP-ZBhDiARIsAH3FSRcwheK5nhnbe7_Y_ywEDTZWVzV3wmu-JrH0BntBO_u0ALL5AsdagOUaAo0tEALw_wcB"><img src="byjus.png" alt="We Are Available On"></a>
+                
+                
+            </div>
+            <div class="client-item">
+                <a href="https://www.tata.com/"><img src="tata.webp" alt="We Are Available On"></a>
+            </div>
+          
+            <div class="client-item">
+                <a href="https://www.infosys.com/newsroom/journalist-resources/infosyslogo.html"><img src="infosys.webp"  alt="We Are Available On"></a>
+            </div>
+            <div class="client-item">
+                <a href="https://www.mahindra.com/"><img src="mahindra.png" alt="We Are Available On"></a>
+            </div>
+        </div>
+
+    </section>

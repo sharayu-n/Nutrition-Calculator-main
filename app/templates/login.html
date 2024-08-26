@@ -1,0 +1,49 @@
+{% load static %}{%load mathfilters %}{%load humanize%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link href="{% static 'static\style.css' %}" rel="stylesheet" type="text/css" />
+    <title>Login Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{% static 'static\images\logo.png' %}"  />
+        </div>
+        <ul>
+            <li class="item"><a href="{% url 'home'%}">Calorie Calculator</a></li>
+            <li class="item"><a href="{%url 'about'%}">About us</a></li>
+            <li class="item"><a href="{%url 'login'%}">Login</a></li>
+            
+        </ul>
+    </nav>
+
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+    {% endfor %}
+
+    <h3>Welcome to Swasthya- Your own Diet planning app!</h3>
+
+
+    {% if user.is_authenticated %}
+    <h3>Hello {{fname}}!</h3>
+    <h4>You're successfully logged in.</h4>
+    <button type="submit" id="button"><a href="/signout">SignOut</a></button>
+    {% else %}
+    <button type="submit" id="button"><a href="/signup">SignUp</a></button>
+    <br/>
+    <br/>
+    <button type="submit" id="button"><a href="/signin">SignIn</a></button>
+    {% endif %}
+</body>
+</html>
